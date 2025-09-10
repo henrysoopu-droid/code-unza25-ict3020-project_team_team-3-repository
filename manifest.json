@@ -5,7 +5,7 @@
   "description": "Detects suspicious words in Wikipedia articles",
   "icons": {
     "48": "icons/icon.png"
-  },
+  }
   "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "icons/icon.png"
@@ -18,3 +18,4 @@
   ],
   "permissions": ["tabs", "activeTab"]
 }
+
