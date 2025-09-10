@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "Wikipedia Suspicion Detector",
+  "version": "1.0",
+  "description": "Detects suspicious words in Wikipedia articles",
+  "icons": {
+    "48": "icons/icon.png"
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.wikipedia.org/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": ["tabs", "activeTab"]
+}
