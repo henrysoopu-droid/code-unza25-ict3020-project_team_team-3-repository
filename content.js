@@ -7,6 +7,7 @@ function scanPage() {
   suspiciousWords.forEach(word => {
     if (document.body.innerText.toLowerCase().includes(word)) {
       found.push(word);
+      
     }
   });
 
@@ -18,7 +19,7 @@ function scanPage() {
     let result = "No suspicious words detected.";
     alert(result); // 🔹 Shows a popup alert on the Wikipedia page
     return result;
-  }
+   }
 }
 
 browser.runtime.onMessage.addListener((message) => {
@@ -27,5 +28,7 @@ browser.runtime.onMessage.addListener((message) => {
     let result = scanPage();
     console.log("Sending scan result:", result);
     browser.runtime.sendMessage({ action: "scanResult", result: result });
+    
   }
 });
+
